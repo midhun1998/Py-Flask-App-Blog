@@ -1,0 +1,21 @@
+<!doctype HTML>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+		<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+	</head>
+<body>
+	<div>
+	<p>Please enter your name below</p>
+	<form method="POST" action="/" class="pure-form">
+		Name: <input type="text" name="username" ><br>
+		<button class="pure-button pure-button-success" type="submit" value="Submit">Submit</button>
+	</form>
+</div>
+<div>
+	{% if name %}
+		<p class="result"> Hey {{ name }}! Welcome to my first Flask App with Jinja!</p>
+	{% endif %}
+</div>
+</body>
+</html>
